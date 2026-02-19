@@ -1,1 +1,1193 @@
-<!DOCTYPE html>\n<html lang="en">\n<head>\n    <meta charset="UTF-8">\n    <meta name="viewport" content="width=device-width, initial-scale=1.0">\n    <title>Document</title>\n    <style>\n        body {\n            font-family: Arial, sans-serif;\n            background-color: #f4f4f4;\n            margin: 0;\n            padding: 20px;\n        }\n        h1 {\n            color: #333;\n        }\n        button {\n            padding: 10px 15px;\n            background-color: #5c5c5c;\n            color: white;\n            border: none;\n            cursor: pointer;\n        }\n    </style>\n</head>\n<body>\n    <h1>Hello, World!</h1>\n    <button onclick="greet()">Click me!</button>\n    <script>\n        function greet() {\n            alert('Hello! This is a complete, self-contained HTML file.');\n        }\n    </script>\n</body>\n</html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Elite Melodies - Músicas personalizadas profissionais. Transformamos sua história em uma composição exclusiva.">
+    <meta name="theme-color" content="#ff6b35">
+    <title>Elite Melodies - Sua História Merece uma Música</title>
+    
+    <style>
+        /* ===== VARIÁVEIS CSS ===== */
+        :root {
+            --elite-orange: #ff6b35;
+            --elite-dark: #1a1a1a;
+            --elite-gray: #2d2d2d;
+            --elite-light-gray: #4a4a4a;
+            --elite-text: #ffffff;
+            --elite-secondary-text: #d1d5db;
+            --transition: all 0.3s ease;
+        }
+
+        /* ===== RESET E ESTILOS GLOBAIS ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, var(--elite-dark) 0%, #0f0f0f 100%);
+            color: var(--elite-text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ===== BOTÃO DE IDIOMA ===== */
+        .language-switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: var(--elite-orange);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            z-index: 999;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+        }
+
+        .language-switcher:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(255, 107, 53, 0.5);
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero-section {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: linear-gradient(135deg, var(--elite-dark) 0%, var(--elite-gray) 100%);
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at center, rgba(255, 107, 53, 0.1) 0%, transparent 70%);
+            animation: pulse 4s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-icon {
+            font-size: 80px;
+            margin-bottom: 20px;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .hero-title {
+            font-size: clamp(40px, 8vw, 80px);
+            font-weight: 800;
+            margin-bottom: 30px;
+            line-height: 1.2;
+            letter-spacing: -2px;
+        }
+
+        .hero-highlight {
+            background: linear-gradient(135deg, var(--elite-orange), #ff9557);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-description {
+            font-size: 20px;
+            color: var(--elite-secondary-text);
+            max-width: 600px;
+            margin: 0 auto 40px;
+            line-height: 1.8;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* ===== BOTÕES GERAIS ===== */
+        .btn {
+            padding: 16px 40px;
+            font-size: 16px;
+            font-weight: 700;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--elite-orange), #ff9557);
+            color: white;
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 107, 53, 0.6);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--elite-orange);
+            border: 2px solid var(--elite-orange);
+        }
+
+        .btn-secondary:hover {
+            background: var(--elite-orange);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        /* ===== FEATURES SECTION ===== */
+        .features-section {
+            padding: 100px 20px;
+            background: var(--elite-dark);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .section-title {
+            font-size: clamp(32px, 5vw, 50px);
+            font-weight: 800;
+            margin-bottom: 20px;
+            color: var(--elite-text);
+        }
+
+        .section-subtitle {
+            font-size: 18px;
+            color: var(--elite-secondary-text);
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+
+        .section-divider {
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--elite-orange), transparent);
+            margin: 0 auto;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .feature-card {
+            background: linear-gradient(135deg, var(--elite-gray), rgba(77, 77, 77, 0.5));
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            transition: var(--transition);
+            border: 1px solid rgba(255, 107, 53, 0.2);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--elite-orange);
+            box-shadow: 0 20px 40px rgba(255, 107, 53, 0.2);
+        }
+
+        .feature-icon {
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+
+        .feature-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: var(--elite-text);
+        }
+
+        .feature-description {
+            color: var(--elite-secondary-text);
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        /* ===== GALLERY SECTION ===== */
+        .gallery-section {
+            padding: 100px 20px;
+            background: linear-gradient(135deg, var(--elite-dark), var(--elite-gray));
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .video-card {
+            background: var(--elite-gray);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: var(--transition);
+            border: 1px solid rgba(255, 107, 53, 0.1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .video-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--elite-orange);
+            box-shadow: 0 15px 40px rgba(255, 107, 53, 0.2);
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .video-player {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .video-info {
+            padding: 24px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .video-tags {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+        }
+
+        .video-tag {
+            background: rgba(255, 107, 53, 0.2);
+            color: var(--elite-orange);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .video-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--elite-text);
+        }
+
+        .video-description {
+            color: var(--elite-secondary-text);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        /* ===== PRICING SECTION ===== */
+        .pricing-section {
+            padding: 100px 20px;
+            background: var(--elite-dark);
+        }
+
+        .pricing-subtitle {
+            text-align: center;
+            font-size: 24px;
+            color: var(--elite-orange);
+            margin-bottom: 50px;
+            font-weight: 700;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-bottom: 80px;
+        }
+
+        .pricing-card {
+            background: linear-gradient(135deg, var(--elite-gray), rgba(77, 77, 77, 0.5));
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            border: 1px solid rgba(255, 107, 53, 0.2);
+            transition: var(--transition);
+        }
+
+        .pricing-card.featured {
+            border: 2px solid var(--elite-orange);
+            transform: scale(1.05);
+            box-shadow: 0 20px 40px rgba(255, 107, 53, 0.2);
+        }
+
+        .pricing-card:hover {
+            border-color: var(--elite-orange);
+        }
+
+        .pricing-badge {
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        .pricing-badge.orange {
+            background: rgba(255, 107, 53, 0.2);
+            color: var(--elite-orange);
+        }
+
+        .pricing-badge.blue {
+            background: rgba(100, 200, 255, 0.2);
+            color: #64c8ff;
+        }
+
+        .pricing-card h4 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: var(--elite-text);
+        }
+
+        .price-value {
+            font-size: 42px;
+            font-weight: 800;
+            color: var(--elite-orange);
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin-top: 30px;
+            text-align: left;
+        }
+
+        .pricing-features li {
+            padding: 10px 0;
+            color: var(--elite-secondary-text);
+            border-bottom: 1px solid rgba(255, 107, 53, 0.1);
+        }
+
+        .info-section {
+            background: linear-gradient(135deg, var(--elite-gray), rgba(77, 77, 77, 0.5));
+            padding: 40px;
+            border-radius: 16px;
+            margin-bottom: 30px;
+            border-left: 4px solid var(--elite-orange);
+        }
+
+        .info-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--elite-orange);
+            margin-bottom: 15px;
+        }
+
+        .info-section p {
+            color: var(--elite-secondary-text);
+            margin-bottom: 15px;
+        }
+
+        .info-list {
+            list-style: none;
+            padding-left: 20px;
+        }
+
+        .info-list li {
+            color: var(--elite-secondary-text);
+            margin: 10px 0;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .info-list li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--elite-orange);
+            font-weight: 700;
+        }
+
+        /* ===== FORM SECTION ===== */
+        .form-section {
+            padding: 100px 20px;
+            background: linear-gradient(135deg, var(--elite-dark), var(--elite-gray));
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 50px auto 0;
+            background: var(--elite-gray);
+            padding: 50px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 107, 53, 0.2);
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group.hidden {
+            display: none;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: var(--elite-text);
+            font-size: 14px;
+        }
+
+        .form-input,
+        .form-select,
+        .form-textarea {
+            width: 100%;
+            padding: 14px 18px;
+            border: 1px solid rgba(255, 107, 53, 0.3);
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--elite-text);
+            font-size: 14px;
+            transition: var(--transition);
+            font-family: inherit;
+        }
+
+        .form-input:focus,
+        .form-select:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: var(--elite-orange);
+            background: rgba(255, 107, 53, 0.1);
+            box-shadow: 0 0 10px rgba(255, 107, 53, 0.2);
+        }
+
+        .form-textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .form-note {
+            text-align: center;
+            color: var(--elite-secondary-text);
+            font-size: 13px;
+            margin-top: 20px;
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(135deg, var(--elite-orange), #ff9557);
+            color: white;
+            border: none;
+            font-weight: 700;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 16px;
+        }
+
+        .btn-submit:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(255, 107, 53, 0.4);
+        }
+
+        /* ===== WHATSAPP BUTTON ===== */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--elite-orange), #ff9557);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+            transition: var(--transition);
+            z-index: 998;
+            text-decoration: none;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.15);
+            box-shadow: 0 8px 25px rgba(255, 107, 53, 0.6);
+        }
+
+        /* ===== RESPONSIVE DESIGN ===== */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 40px;
+            }
+
+            .hero-description {
+                font-size: 16px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .form-container {
+                padding: 30px 20px;
+            }
+
+            .language-switcher {
+                top: 10px;
+                right: 10px;
+                padding: 10px 15px;
+                font-size: 12px;
+            }
+
+            .whatsapp-float {
+                bottom: 20px;
+                right: 20px;
+                width: 50px;
+                height: 50px;
+                font-size: 24px;
+            }
+
+            .pricing-card.featured {
+                transform: scale(1);
+            }
+
+            .features-grid,
+            .video-grid,
+            .pricing-grid {
+                gap: 20px;
+            }
+
+            .section-title {
+                font-size: 32px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-section {
+                height: auto;
+                padding: 60px 20px;
+            }
+
+            .hero-icon {
+                font-size: 50px;
+            }
+
+            .hero-title {
+                font-size: 28px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            .features-section,
+            .gallery-section,
+            .pricing-section,
+            .form-section {
+                padding: 60px 20px;
+            }
+
+            .video-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Botão de Idioma -->
+    <button class="language-switcher" onclick="toggleLanguage()">
+        🌐 <span id="langText">English</span>
+    </button>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-icon">🎵</div>
+            <h1 class="hero-title">
+                <span id="heroTitle1">Sua História</span> <br>
+                <span class="hero-highlight" id="heroTitle2">Merece uma Música</span>
+            </h1>
+            <p class="hero-description" id="heroDesc">
+                Transformamos sentimentos em melodias eternas. Surpreenda quem você ama com uma composição exclusiva, criada profissionalmente para o seu momento.
+            </p>
+            <div class="hero-buttons">
+                <a href="#services" class="btn btn-primary" id="heroBtn1">Monte seu pacote</a>
+                <a href="#gallery" class="btn btn-secondary" id="heroBtn2">Ver Exemplos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES SECTION -->
+    <section id="features" class="features-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" id="featTitle">Nossos Diferenciais</h2>
+                <p class="section-subtitle" id="featSubtitle">Por que escolher a Elite Melodies para contar sua história</p>
+                <div class="section-divider"></div>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎛️</div>
+                    <h3 class="feature-title" id="feat1Title">Totalmente Personalizável</h3>
+                    <p class="feature-description" id="feat1Desc">Monte sua música do jeito que você quer. Escolha o estilo, a letra e o sentimento.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🎁</div>
+                    <h3 class="feature-title" id="feat2Title">Promoção Especial</h3>
+                    <p class="feature-description" id="feat2Desc">Na compra da segunda música, a terceira é totalmente gratuita para você presentear.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">⏰</div>
+                    <h3 class="feature-title" id="feat3Title">Entrega Expressa</h3>
+                    <p class="feature-description" id="feat3Desc">Receba sua composição finalizada e masterizada em até 24 horas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY SECTION -->
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" id="galleryTitle">Nossa Galeria</h2>
+                <p class="section-subtitle" id="gallerySubtitle">Inspire-se com algumas de nossas produções organizadas por estilo musical.</p>
+                <div class="section-divider"></div>
+            </div>
+
+            <div class="video-grid">
+                <div class="video-card">
+                    <div class="video-container">
+                        <video controls preload="metadata" class="video-player" controlsList="nodownload noremoteplayback" disablePictureInPicture oncontextmenu="return false;">
+                            <source src="amigo-churrasco.mp4" type="video/mp4">
+                            Seu navegador não suporta reprodução de vídeo.
+                        </video>
+                    </div>
+                    <div class="video-info">
+                        <div class="video-tags">
+                            <span class="video-tag">Pagode</span>
+                            <span class="video-tag">Samba</span>
+                        </div>
+                        <h3 class="video-title">Amigo de Churrasco</h3>
+                        <p class="video-description">Celebre a amizade com alegria e ritmo brasileiro.</p>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-container">
+                        <video controls preload="metadata" class="video-player" controlsList="nodownload noremoteplayback" disablePictureInPicture oncontextmenu="return false;">
+                            <source src="bodas-prata.mp4" type="video/mp4">
+                            Seu navegador não suporta reprodução de vídeo.
+                        </video>
+                    </div>
+                    <div class="video-info">
+                        <div class="video-tags">
+                            <span class="video-tag">Pop Romântico</span>
+                        </div>
+                        <h3 class="video-title">Bodas de Prata</h3>
+                        <p class="video-description">25 anos de união merecem uma melodia inesquecível.</p>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-container">
+                        <video controls preload="metadata" class="video-player" controlsList="nodownload noremoteplayback" disablePictureInPicture oncontextmenu="return false;">
+                            <source src="dia-dos-pais.mp4" type="video/mp4">
+                            Seu navegador não suporta reprodução de vídeo.
+                        </video>
+                    </div>
+                    <div class="video-info">
+                        <div class="video-tags">
+                            <span class="video-tag">Rock Clássico</span>
+                        </div>
+                        <h3 class="video-title">Dia dos Pais</h3>
+                        <p class="video-description">Homenagem com atitude e emoção para o seu herói.</p>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-container">
+                        <video controls preload="metadata" class="video-player" controlsList="nodownload noremoteplayback" disablePictureInPicture oncontextmenu="return false;">
+                            <source src="milagre-vida.mp4" type="video/mp4">
+                            Seu navegador não suporta reprodução de vídeo.
+                        </video>
+                    </div>
+                    <div class="video-info">
+                        <div class="video-tags">
+                            <span class="video-tag">Gospel</span>
+                            <span class="video-tag">Louvor</span>
+                        </div>
+                        <h3 class="video-title">Milagre da Vida</h3>
+                        <p class="video-description">Agradecimento e fé em uma composição tocante.</p>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-container">
+                        <video controls preload="metadata" class="video-player" controlsList="nodownload noremoteplayback" disablePictureInPicture oncontextmenu="return false;">
+                            <source src="pedido-casamento.mp4" type="video/mp4">
+                            Seu navegador não suporta reprodução de vídeo.
+                        </video>
+                    </div>
+                    <div class="video-info">
+                        <div class="video-tags">
+                            <span class="video-tag">Sertanejo Universitário</span>
+                        </div>
+                        <h3 class="video-title">Pedido de Casamento</h3>
+                        <p class="video-description">O "Sim" perfeito ao som do estilo mais amado do Brasil.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICING SECTION -->
+    <section id="pricing" class="pricing-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" id="pricingTitle">🎵 Combos de Músicas Personalizadas</h2>
+                <p class="pricing-intro" id="pricingIntro">
+                    Criamos músicas exclusivas, feitas sob medida com base na sua história, emoções e informações fornecidas. Cada música é única, profissionalmente composta e pensada para emocionar quem recebe.
+                </p>
+                <div class="section-divider"></div>
+            </div>
+
+            <h3 class="pricing-subtitle" id="pricingSubtitle">💵 Valores e Combos Disponíveis</h3>
+
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-badge orange">🟠 Música Personalizada</div>
+                    <h4>Unidade</h4>
+                    <div>
+                        <span class="price-value">R$ 40</span><span>,00</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>✔ 1 música personalizada</li>
+                        <li>✔ Letra e melodia exclusivas</li>
+                        <li>✔ Criada com base nas informações do cliente</li>
+                    </ul>
+                </div>
+
+                <div class="pricing-card featured">
+                    <div class="pricing-badge blue">⭐ Combo Duplo</div>
+                    <h4>2 Músicas Personalizadas</h4>
+                    <div>
+                        <span class="price-value">R$ 70</span><span>,00</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>✔ 2 músicas personalizadas</li>
+                        <li>✔ Economia em relação à compra individual</li>
+                        <li>✔ Ideal para presentear mais de uma pessoa</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="info-section referral-info">
+                <h3 class="info-title">🎁 Benefício por Indicação</h3>
+                <p id="infoRefText">Ao adquirir qualquer pacote, você pode participar do programa de indicação:</p>
+                <ul class="info-list">
+                    <li id="infoRef1">Se você indicar uma pessoa</li>
+                    <li id="infoRef2">E essa pessoa comprar o pacote de 2 músicas (R$ 70,00)</li>
+                    <li id="infoRef3">Você ganha R$ 10,00 de desconto na sua próxima compra</li>
+                </ul>
+            </div>
+
+            <div class="info-section coupon-info">
+                <h3 class="info-title">🎟️ Regra do Cupom de Indicação</h3>
+                <p id="infoCouponText">Para que o cupom seja válido, é obrigatório:</p>
+                <ul class="info-list">
+                    <li id="infoCoupon1">Informar o nome completo da pessoa indicada</li>
+                    <li id="infoCoupon2">A pessoa indicada deverá informar o seu nome completo no momento da compra</li>
+                    <li id="infoCoupon3">O sistema de IA identifica a indicação corretamente e aplica o cupom</li>
+                </ul>
+            </div>
+
+            <div class="info-section rules-info">
+                <h3 class="info-title">📌 Observações Importantes</h3>
+                <p style="color: var(--elite-orange); font-weight: 600;" id="infoRulesTitle">Leia com Atenção</p>
+                <ul class="info-list">
+                    <li id="infoRules1">Após a criação da música, será enviada uma prévia curta para aprovação do cliente</li>
+                    <li id="infoRules2">Após a concordância com a prévia, o pagamento via PIX deverá ser efetuado imediatamente</li>
+                    <li id="infoRules3">Após a confirmação da geração da música:</li>
+                    <li id="infoRules4">❌ Não será possível realizar ajustes</li>
+                    <li id="infoRules5">❌ Não será possível reformular a letra ou melodia</li>
+                    <li id="infoRules6">❌ Não haverá reprocessamento da música</li>
+                    <li id="infoRules7">Essa regra garante agilidade na entrega e respeito ao processo criativo</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORM SECTION -->
+    <section id="services" class="form-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" id="formTitle">Monte Sua Música</h2>
+                <p class="section-subtitle" id="formSubtitle">Preencha o formulário abaixo para iniciarmos a composição da sua trilha sonora.</p>
+                <div class="section-divider"></div>
+            </div>
+
+            <div class="form-container">
+                <form id="orderForm" onsubmit="handleSubmit(event)">
+                    <div class="form-group">
+                        <label class="form-label" id="labelCombo">Escolha seu Combo *</label>
+                        <select id="combo" name="combo" class="form-select" required>
+                            <option value="single">🟠 1 Música - R$ 40,00</option>
+                            <option value="double">⭐ 2 Músicas - R$ 70,00</option>
+                        </select>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" id="labelName">Seu Nome *</label>
+                            <input type="text" id="name" name="name" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" id="labelHonoree">Homenageado(a) *</label>
+                            <input type="text" id="honoree" name="honoree" class="form-input" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" id="labelPhone">Seu Telefone *</label>
+                        <input type="tel" id="phone" name="phone" class="form-input" placeholder="(XX) XXXXX-XXXX" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" id="labelStyle">Estilo Musical</label>
+                        <select id="style" name="style" class="form-select" onchange="toggleCustomStyle()">
+                            <option>Pop Romântico</option>
+                            <option>Pagode</option>
+                            <option>Samba</option>
+                            <option>Rock Clássico</option>
+                            <option>Gospel</option>
+                            <option>Sertanejo Universitário</option>
+                            <option>MPB</option>
+                            <option>Jazz</option>
+                            <option>Blues</option>
+                            <option>Outro</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group hidden" id="customStyleGroup">
+                        <input type="text" id="customStyle" name="customStyle" class="form-input" placeholder="Digite o estilo musical desejado">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" id="labelStory">Conte sua História *</label>
+                        <textarea id="story" name="story" class="form-textarea" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" id="labelReferral">🎁 Indicação (Ganhe R$ 10,00)</label>
+                        <input type="text" id="referral" name="referral" class="form-input" placeholder="Nome completo de quem te indicou">
+                    </div>
+
+                    <button type="submit" class="btn btn-submit" id="submitBtn">
+                        📱 Finalizar Pedido no WhatsApp
+                    </button>
+                    <p class="form-note" id="formNote">Ao clicar, você será redirecionado para o WhatsApp com os dados preenchidos.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHATSAPP BUTTON -->
+    <a href="https://wa.me/5598981967433?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20as%20músicas%20personalizadas%20da%20Elite%20Melodies." target="_blank" class="whatsapp-float">
+        💬
+    </a>
+
+    <script>
+        // ===== TRADUÇÕES =====
+        const translations = {
+            pt: {
+                langText: "English",
+                heroTitle1: "Sua História",
+                heroTitle2: "Merece uma Música",
+                heroDesc: "Transformamos sentimentos em melodias eternas. Surpreenda quem você ama com uma composição exclusiva, criada profissionalmente para o seu momento.",
+                heroBtn1: "Monte seu pacote",
+                heroBtn2: "Ver Exemplos",
+                featTitle: "Nossos Diferenciais",
+                featSubtitle: "Por que escolher a Elite Melodies para contar sua história",
+                feat1Title: "Totalmente Personalizável",
+                feat1Desc: "Monte sua música do jeito que você quer. Escolha o estilo, a letra e o sentimento.",
+                feat2Title: "Promoção Especial",
+                feat2Desc: "Na compra da segunda música, a terceira é totalmente gratuita para você presentear.",
+                feat3Title: "Entrega Expressa",
+                feat3Desc: "Receba sua composição finalizada e masterizada em até 24 horas.",
+                galleryTitle: "Nossa Galeria",
+                gallerySubtitle: "Inspire-se com algumas de nossas produções organizadas por estilo musical.",
+                pricingTitle: "🎵 Combos de Músicas Personalizadas",
+                pricingIntro: "Criamos músicas exclusivas, feitas sob medida com base na sua história, emoções e informações fornecidas. Cada música é única, profissionalmente composta e pensada para emocionar quem recebe.",
+                pricingSubtitle: "💵 Valores e Combos Disponíveis",
+                infoRefText: "Ao adquirir qualquer pacote, você pode participar do programa de indicação:",
+                infoRef1: "Se você indicar uma pessoa",
+                infoRef2: "E essa pessoa comprar o pacote de 2 músicas (R$ 70,00)",
+                infoRef3: "Você ganha R$ 10,00 de desconto na sua próxima compra",
+                infoCouponText: "Para que o cupom seja válido, é obrigatório:",
+                infoCoupon1: "Informar o nome completo da pessoa indicada",
+                infoCoupon2: "A pessoa indicada deverá informar o seu nome completo no momento da compra",
+                infoCoupon3: "O sistema de IA identifica a indicação corretamente e aplica o cupom",
+                infoRulesTitle: "Leia com Atenção",
+                infoRules1: "Após a criação da música, será enviada uma prévia curta para aprovação do cliente",
+                infoRules2: "Após a concordância com a prévia, o pagamento via PIX deverá ser efetuado imediatamente",
+                infoRules3: "Após a confirmação da geração da música:",
+                infoRules4: "❌ Não será possível realizar ajustes",
+                infoRules5: "❌ Não será possível reformular a letra ou melodia",
+                infoRules6: "❌ Não haverá reprocessamento da música",
+                infoRules7: "Essa regra garante agilidade na entrega e respeito ao processo criativo",
+                formTitle: "Monte Sua Música",
+                formSubtitle: "Preencha o formulário abaixo para iniciarmos a composição da sua trilha sonora.",
+                labelCombo: "Escolha seu Combo *",
+                labelName: "Seu Nome *",
+                labelHonoree: "Homenageado(a) *",
+                labelPhone: "Seu Telefone *",
+                labelStyle: "Estilo Musical",
+                labelStory: "Conte sua História *",
+                labelReferral: "🎁 Indicação (Ganhe R$ 10,00)",
+                submitBtn: "📱 Finalizar Pedido no WhatsApp",
+                formNote: "Ao clicar, você será redirecionado para o WhatsApp com os dados preenchidos."
+            },
+            en: {
+                langText: "Português",
+                heroTitle1: "Your Story",
+                heroTitle2: "Deserves a Song",
+                heroDesc: "We transform feelings into eternal melodies. Surprise someone you love with an exclusive composition, professionally created for your moment.",
+                heroBtn1: "Create your package",
+                heroBtn2: "See Examples",
+                featTitle: "Our Differentials",
+                featSubtitle: "Why choose Elite Melodies to tell your story",
+                feat1Title: "Fully Customizable",
+                feat1Desc: "Create your music the way you want. Choose the style, lyrics and feeling.",
+                feat2Title: "Special Promotion",
+                feat2Desc: "With the purchase of the second song, the third is completely free for you to gift.",
+                feat3Title: "Express Delivery",
+                feat3Desc: "Receive your finalized and mastered composition in up to 24 hours.",
+                galleryTitle: "Our Gallery",
+                gallerySubtitle: "Get inspired with some of our productions organized by musical style.",
+                pricingTitle: "🎵 Custom Music Packages",
+                pricingIntro: "We create exclusive music, made to measure based on your story, emotions and information provided. Each song is unique, professionally composed and designed to move whoever receives it.",
+                pricingSubtitle: "💵 Available Prices and Packages",
+                infoRefText: "When you purchase any package, you can participate in our referral program:",
+                infoRef1: "If you refer someone",
+                infoRef2: "And that person buys the 2 song package (R$ 70.00)",
+                infoRef3: "You earn R$ 10.00 discount on your next purchase",
+                infoCouponText: "For the coupon to be valid, it is mandatory:",
+                infoCoupon1: "Provide the full name of the referred person",
+                infoCoupon2: "The referred person must provide your full name at purchase",
+                infoCoupon3: "The AI system correctly identifies the referral and applies the coupon",
+                infoRulesTitle: "Read Carefully",
+                infoRules1: "After creating the music, a short preview will be sent for client approval",
+                infoRules2: "After agreeing with the preview, payment via PIX must be made immediately",
+                infoRules3: "After confirming the music generation:",
+                infoRules4: "❌ It will not be possible to make adjustments",
+                infoRules5: "❌ It will not be possible to reformulate the lyrics or melody",
+                infoRules6: "❌ There will be no music reprocessing",
+                infoRules7: "This rule ensures speed in delivery and respect for the creative process",
+                formTitle: "Create Your Music",
+                formSubtitle: "Fill out the form below to start composing your soundtrack.",
+                labelCombo: "Choose your Package *",
+                labelName: "Your Name *",
+                labelHonoree: "Honoree *",
+                labelPhone: "Your Phone *",
+                labelStyle: "Musical Style",
+                labelStory: "Tell Your Story *",
+                labelReferral: "🎁 Referral (Win R$ 10.00)",
+                submitBtn: "📱 Complete Order on WhatsApp",
+                formNote: "By clicking, you will be redirected to WhatsApp with the data filled in."
+            }
+        };
+
+        let currentLanguage = 'pt';
+
+        // Função para alternar idioma
+        function toggleLanguage() {
+            currentLanguage = currentLanguage === 'pt' ? 'en' : 'pt';
+            updateLanguage();
+        }
+
+        // Atualizar textos do idioma
+        function updateLanguage() {
+            const lang = translations[currentLanguage];
+            document.getElementById('langText').textContent = lang.langText;
+            document.getElementById('heroTitle1').textContent = lang.heroTitle1;
+            document.getElementById('heroTitle2').textContent = lang.heroTitle2;
+            document.getElementById('heroDesc').textContent = lang.heroDesc;
+            document.getElementById('heroBtn1').textContent = lang.heroBtn1;
+            document.getElementById('heroBtn2').textContent = lang.heroBtn2;
+            document.getElementById('featTitle').textContent = lang.featTitle;
+            document.getElementById('featSubtitle').textContent = lang.featSubtitle;
+            document.getElementById('feat1Title').textContent = lang.feat1Title;
+            document.getElementById('feat1Desc').textContent = lang.feat1Desc;
+            document.getElementById('feat2Title').textContent = lang.feat2Title;
+            document.getElementById('feat2Desc').textContent = lang.feat2Desc;
+            document.getElementById('feat3Title').textContent = lang.feat3Title;
+            document.getElementById('feat3Desc').textContent = lang.feat3Desc;
+            document.getElementById('galleryTitle').textContent = lang.galleryTitle;
+            document.getElementById('gallerySubtitle').textContent = lang.gallerySubtitle;
+            document.getElementById('pricingTitle').textContent = lang.pricingTitle;
+            document.getElementById('pricingIntro').textContent = lang.pricingIntro;
+            document.getElementById('pricingSubtitle').textContent = lang.pricingSubtitle;
+            document.getElementById('infoRefText').textContent = lang.infoRefText;
+            document.getElementById('infoRef1').textContent = lang.infoRef1;
+            document.getElementById('infoRef2').textContent = lang.infoRef2;
+            document.getElementById('infoRef3').textContent = lang.infoRef3;
+            document.getElementById('infoCouponText').textContent = lang.infoCouponText;
+            document.getElementById('infoCoupon1').textContent = lang.infoCoupon1;
+            document.getElementById('infoCoupon2').textContent = lang.infoCoupon2;
+            document.getElementById('infoCoupon3').textContent = lang.infoCoupon3;
+            document.getElementById('infoRulesTitle').textContent = lang.infoRulesTitle;
+            document.getElementById('infoRules1').textContent = lang.infoRules1;
+            document.getElementById('infoRules2').textContent = lang.infoRules2;
+            document.getElementById('infoRules3').textContent = lang.infoRules3;
+            document.getElementById('infoRules4').textContent = lang.infoRules4;
+            document.getElementById('infoRules5').textContent = lang.infoRules5;
+            document.getElementById('infoRules6').textContent = lang.infoRules6;
+            document.getElementById('infoRules7').textContent = lang.infoRules7;
+            document.getElementById('formTitle').textContent = lang.formTitle;
+            document.getElementById('formSubtitle').textContent = lang.formSubtitle;
+            document.getElementById('labelCombo').textContent = lang.labelCombo;
+            document.getElementById('labelName').textContent = lang.labelName;
+            document.getElementById('labelHonoree').textContent = lang.labelHonoree;
+            document.getElementById('labelPhone').textContent = lang.labelPhone;
+            document.getElementById('labelStyle').textContent = lang.labelStyle;
+            document.getElementById('labelStory').textContent = lang.labelStory;
+            document.getElementById('labelReferral').textContent = lang.labelReferral;
+            document.getElementById('submitBtn').textContent = lang.submitBtn;
+            document.getElementById('formNote').textContent = lang.formNote;
+        }
+
+        // Mostrar/ocultar estilo customizado
+        function toggleCustomStyle() {
+            const style = document.getElementById('style').value;
+            const customStyleGroup = document.getElementById('customStyleGroup');
+            customStyleGroup.classList.toggle('hidden', style !== 'Outro');
+        }
+
+        // Formatar telefone
+        function formatPhone(input) {
+            let value = input.value.replace(/\D/g, '');
+            if (value.length > 11) value = value.slice(0, 11);
+            if (value.length >= 2) {
+                value = '(' + value.substring(0, 2) + ') ' + value.substring(2);
+            }
+            if (value.length >= 10) {
+                value = value.substring(0, 10) + '-' + value.substring(10);
+            }
+            input.value = value;
+        }
+
+        // Submeter formulário
+        function handleSubmit(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('name').value.trim();
+            const honoree = document.getElementById('honoree').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const combo = document.getElementById('combo').value;
+            const style = document.getElementById('style').value;
+            const customStyle = document.getElementById('customStyle').value.trim();
+            const story = document.getElementById('story').value.trim();
+            const referral = document.getElementById('referral').value.trim();
+
+            if (!name || !honoree || !phone || !story) {
+                alert('Por favor, preencha todos os campos obrigatórios!');
+                return;
+            }
+
+            const comboText = combo === 'single' ? '1 Música - R$ 40,00' : '2 Músicas - R$ 70,00';
+            const styleText = style === 'Outro' ? customStyle : style;
+            const referralText = referral ? `\nIndicação: ${referral}` : '';
+
+            const message = `Olá! Gostaria de encomendar uma música personalizada.\n\nCombo: ${comboText}\nMeu Nome: ${name}\nHomenageado(a): ${honoree}\nTelefone: ${phone}\nEstilo: ${styleText}\n\nHistória:\n${story}${referralText}`;
+
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappUrl = `https://wa.me/5598981967433?text=${encodedMessage}`;
+
+            window.open(whatsappUrl, '_blank');
+        }
+
+        // Event listener para formatar telefone
+        document.getElementById('phone').addEventListener('input', function() {
+            formatPhone(this);
+        });
+    </script>
+</body>
+</html>
