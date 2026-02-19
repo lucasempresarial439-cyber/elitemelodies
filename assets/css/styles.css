@@ -1,0 +1,55 @@
+/* CSS Stylistic Framework for Elite Melodies */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #f0f0f0;
+    line-height: 1.6;
+}
+
+.header {
+    background: linear-gradient(45deg, #ff7e5f, #feb47b);
+    padding: 20px;
+    text-align: center;
+    animation: fadeIn 0.5s;
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('hero-image.jpg') no-repeat center center/cover;
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 10px;
+}
+
+.pricing {
+    background-color: #1e1e1e;
+    padding: 20px;
+}
+
+@media (max-width: 600px) {
+    .features { flex-direction: column; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
